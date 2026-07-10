@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#ff8bb6">
+  <title>もふもふ ピンポン！</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="titleScreen" class="screen active">
+      <div class="title-cloud">🏓</div>
+      <p class="eyebrow">Mofu Mofu Table Tennis</p>
+      <h1>もふもふ<br><span>ピンポン！</span></h1>
+      <div class="rules">
+        <h2>あそびかた</h2>
+        <p>画面を左右にスワイプしてラケットを動かそう。先に <b>7点</b> とったら勝ち！</p>
+        <div class="rule-icons"><span>👆 左右にうごかす</span><span>✨ ラリーをつなごう</span></div>
+      </div>
+      <h2 class="choose">たいせん あいてを えらんでね</h2>
+      <div class="cards">
+        <button class="enemy-card mana" data-enemy="mana" aria-label="マナと対戦">
+          <span class="portrait bear happy" aria-hidden="true"></span>
+          <span class="card-name">マナ <small>♀</small></span>
+          <span class="card-tag">おっとりクマさん</span>
+          <span class="start">マナと勝負！</span>
+        </button>
+        <button class="enemy-card maeda" data-enemy="maeda" aria-label="マエダと対戦">
+          <span class="portrait gorilla happy" aria-hidden="true"></span>
+          <span class="card-name">マエダ <small>♂</small></span>
+          <span class="card-tag">やんちゃゴリラ</span>
+          <span class="start">マエダと勝負！</span>
+        </button>
+      </div>
+      <p class="hint">音が鳴らないときは、最初に画面をタップしてね</p>
+    </section>
+
+    <section id="playScreen" class="screen">
+      <header class="hud">
+        <button id="backButton" class="icon-button" aria-label="タイトルへ戻る">⌂</button>
+        <div class="scoreboard"><span id="playerScore">0</span><i>−</i><span id="enemyScore">0</span></div>
+        <div class="rally-badge">RALLY <b id="rally">0</b></div>
+      </header>
+      <div class="opponent-label"><span id="enemyMini" class="mini bear"></span><b id="enemyName">マナ</b></div>
+      <canvas id="gameCanvas" aria-label="卓球ゲーム"></canvas>
+      <div class="player-label"><span class="mini rabbit"></span><b>あなた</b></div>
+      <div id="gameMessage" class="game-message"></div>
+      <p class="control-tip">画面をスワイプしてラケットを動かそう</p>
+    </section>
+
+    <section id="resultScreen" class="screen result">
+      <p id="resultKicker" class="eyebrow"></p>
+      <h1 id="resultTitle"></h1>
+      <div id="resultFace" class="portrait rabbit happy"></div>
+      <p id="resultText"></p>
+      <div class="result-buttons">
+        <button id="retryButton" class="primary">もう一回！</button>
+        <button id="titleButton" class="secondary">相手をえらぶ</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
