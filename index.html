@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="overrides.css">
   <link rel="stylesheet" href="play-overrides.css">
   <link rel="stylesheet" href="version.css">
+  <link rel="stylesheet" href="stick.css">
 </head>
 <body>
   <main class="app">
     <section id="titleScreen" class="screen active">
-      <div class="title-cloud">🏓</div><p class="eyebrow">Mofu Mofu Table Tennis</p><p class="version">Version 1.10</p>
+      <div class="title-cloud">🏓</div><p class="eyebrow">Mofu Mofu Table Tennis</p><p class="version">Version 1.11</p>
       <h1>もふもふ<br><span>ピンポン！</span></h1>
       <div class="rules"><h2>あそびかた</h2><p>画面を左右にスワイプしてラケットを動かそう。<b>11点先取・2点差</b>で勝ち！ 10-10からはデュースだよ。</p><div class="rule-icons"><span>👆 左右にうごかす</span><span>✨ ラリーをつなごう</span></div></div>
       <h2 class="choose">むずかしさを えらんでね</h2>
@@ -29,8 +30,8 @@
     <section id="playScreen" class="screen">
       <header class="hud"><button id="backButton" class="icon-button" aria-label="タイトルへ戻る">⌂</button><div class="scoreboard"><span id="playerScore">0</span><i>−</i><span id="enemyScore">0</span></div><div class="rally-badge">RALLY <b id="rally">0</b></div></header>
       <div class="match-info"><span id="levelName">ノーマル</span><span id="styleName"></span></div>
-      <div class="opponent-label"><span id="enemyMini" class="mini bear"></span><b id="enemyName">マナ</b></div><canvas id="gameCanvas" aria-label="卓球ゲーム"></canvas><div class="player-label"><span class="mini rabbit"></span><b>あなた</b></div><div id="gameMessage" class="game-message"></div><div class="skill-controls"><button id="spinButton">🌀 スピン</button><button id="smashButton">💥 スマッシュ</button></div><p class="control-tip">左右で移動／上スワイプでスマッシュ／下スワイプでスピン</p>
+      <div class="opponent-label"><span id="enemyMini" class="mini bear"></span><b id="enemyName">マナ</b></div><canvas id="gameCanvas" aria-label="卓球ゲーム"></canvas><div id="moveStick" class="virtualStick" aria-label="移動スティック"><div class="stickKnob"></div></div><div class="player-label"><span class="mini rabbit"></span><b>あなた</b></div><div id="gameMessage" class="game-message"></div><div class="skill-controls"><button id="spinButton">🌀 スピン</button><button id="smashButton">💥 スマッシュ</button></div><p class="control-tip">左右で移動／上スワイプでスマッシュ／下スワイプでスピン</p>
     </section>
     <section id="resultScreen" class="screen result"><p id="resultKicker" class="eyebrow"></p><h1 id="resultTitle"></h1><div id="resultFace" class="portrait rabbit happy"></div><p id="resultText"></p><div class="result-buttons"><button id="retryButton" class="primary">もう一回！</button><button id="titleButton" class="secondary">相手をえらぶ</button></div></section>
-  </main><script src="game.js"></script>
+  </main><script src="stick.js"></script><script src="game.js"></script>
 </body></html>
